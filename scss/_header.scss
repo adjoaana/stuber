@@ -1,0 +1,110 @@
+.header {
+  margin-bottom: 1rem;
+  &.open {
+    .overlay {
+      display: block;
+    }
+    .header__toggle {
+      span:first-child {
+        transform: rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    opacity: 0;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient($darkBlue, transparent);
+    z-index: 3;
+  }
+
+  nav {
+    position: relative;
+    background-color: $white;
+    z-index: 4;
+  }
+  &__logo {
+    > img {
+      width: 4.5rem; //128px
+      height: 4.5rem; //150px
+    }
+  }
+  &__menu {
+    display: block;
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    top: 16%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+    background-color: $white;
+    z-index: 5;
+    //visibility: hidden;
+
+    a {
+      display: block;
+      width: 100%;
+      color: $grayishBlue;
+      // transition: color 300ms ease-in-out;
+      &:hover {
+        color: $darkBlue;
+      }
+      &:not(:last-child) {
+        padding-bottom: 1.2rem;
+      }
+    }
+  }
+  &__links {
+    a {
+      position: relative;
+      color: $grayishBlue;
+      font-size: $font-sm;
+      transition: color 300ms ease-in-out;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 5px;
+        background: linear-gradient(to right, $lightCoral, $brightCyan);
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        opacity: 0;
+        transition: opacity 3ooms ease-in-out;
+      }
+      &:hover {
+        color: $darkBlue;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__toggle {
+    span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $darkBlue;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      transform-origin: 3px 1px;
+    }
+  }
+}

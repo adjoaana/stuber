@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="40x40" href="/images/40.png">
+    <title>About Us | Stuber</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/scss/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        $(function(){
+            $('.header').load('reuseheader.html');
+        });
+    </script>
+    <script>
+        $(function(){
+            $('#footer').load('reusefooter.html');
+        })
+    </script>
+</head>
+<body>
+    <header id="header" class="header"></header>
+    <section class="about__hero">
+        <div class="about__hero__content">
+            <div class="about__hero__image">
+                <div class="about__hero__text">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="vision">
+        <div class="vision__title container-pall">
+            <h2>What we stand for </h2>
+            <p>Good things happen when people can move, whether across town or toward their dreams. Opportunities appear, open up, become reality. What started as a way to tap a button to get a ride has led to billions of moments of human connection as people around the world go all kinds of places in all kinds of ways with the help of our technology.</p>
+        </div>
+    </section>
+    <section class="ceo">
+        <div class="ceo__content">
+            <div class="ceo__image">
+                <div class="ceo__text container-pall">
+                    <div class="ceo__title"><h1> A letter from our CEO</h1></div>
+                    <div class="ceo__description"> <p>
+                        Read about our team’s commitment to provide everyone on our global platform with the technology that can help them move ahead.
+                    </p> </div>
+                    <div class="ceo__cta button">Read more</div>
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </section>
+    <section class="team">
+        <div class="team__grid">
+            <div class="team__item">
+                <div class="team__image" style="background-image: url('/images/woman\ 2.jpg');"></div>
+                <div class="team__text">
+                    <div class="team__title">Adjoa Anaman</div>
+                    <div class="team__description">Good things happen when people can move, whether across town or toward their dreams. Opportunities appear, open up, become reality.Good things happen when people can move, whether across town or toward their dreams. Opportunities appear, open up, become reality.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="footer"></footer>
+    <script src="/script.js"></script>
+</body>
+</html>

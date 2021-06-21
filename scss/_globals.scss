@@ -1,0 +1,157 @@
+html,
+body {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: $font-sm;
+  font-family: "Public Sans", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Public Sans", sans-serif;
+  margin: 0;
+}
+h1 {
+  font-weight: 300;
+  font-size: 2.31rem; //30px
+  line-height: 1.15;
+  color: $darkBlue;
+  margin-bottom: 1.5rem;
+  @include breakpoint-up(large) {
+    font-size: $font-xlg;
+  }
+}
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+  @include breakpoint-up(large) {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+.heading {
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 1.25rem;
+  font-size: 5rem; //80px
+  background: white;
+  color: $brightCyan;
+  margin-bottom: 1.25rem;
+}
+.flex {
+  display: flex;
+  &-ta-c {
+    text-align: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-jc-sb {
+    justify-content: space-between;
+  }
+}
+.container {
+  max-width: 69.5625rem; //1113px
+  margin: 0 auto;
+
+  &-pall {
+    padding: 1.25rem 1.3rem;
+    @include breakpoint-up(large) {
+      padding-top: 2.25rem;
+      padding-right: 4rem;
+      padding-left: 4rem;
+      padding-bottom: 2.25rem;
+    }
+  }
+  &-px {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    @include breakpoint-up(large) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+  &-py {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    @include breakpoint-up(large) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+  &-pt {
+    padding-top: 2.25rem;
+  }
+}
+a,
+a::before,
+a::after {
+  text-decoration: none;
+}
+p {
+  color: $grayishBlue;
+  font-size: $font-med;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  @include breakpoint-up(large) {
+    color: $grayishBlue;
+    font-size: $font-med;
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+}
+
+button,
+.button {
+  padding: 0.875rem 2.1875rem;
+  width: 8.75rem;
+  cursor: pointer;
+  border-radius: 50px;
+  background: linear-gradient(to right, $lightCoral, $brightCyan);
+  color: black;
+  text-align: center;
+  font-size: $font-sm;
+  color: $white;
+  transition: opacity 300ms ease-in-out;
+  &:hover {
+    opacity: 0.5;
+    color: $white;
+  }
+}
+
+//visibility
+.hide-for-mobile {
+  //hide for tablet and mobile
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  //hide for desktop viewport widths
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+// .overlay {
+//   display: block;
+//   position: absolute;
+//   top: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   left: 0px;
+//   background: linear-gradient($darkBlue, transparent);
+//   // opacity: 0;
+//   transition: opacity 300ms ease-in-out;
+// }

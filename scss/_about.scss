@@ -1,0 +1,89 @@
+.about__hero {
+  &__image {
+    position: relative;
+    background-image: url("/images/woman\ working\ .jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 17.5rem;
+    @include breakpoint-up(medium) {
+      min-height: 25rem;
+    }
+    @include breakpoint-up(large) {
+      min-height: 41rem;
+    }
+  }
+  &__text {
+    h1 {
+      @include breakpoint-down(medium) {
+        color: $white;
+        padding-top: 14.25rem; //228px
+        padding-left: 0.75rem; //12px
+        text-align: center;
+      }
+      @include breakpoint-up(large) {
+        color: $white;
+        padding-top: 35.3125rem; //565px
+        margin-left: 2.875rem; //46px
+        z-index: 3;
+      }
+    }
+  }
+}
+.ceo {
+  &__content {
+  }
+  &__image {
+    position: relative;
+    background-image: url("/images/woman\ 1.jpg");
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include breakpoint-down(medium) {
+      min-height: 25rem;
+      background-position: left center;
+    }
+    @include breakpoint-up(large) {
+      min-height: 41rem;
+    }
+  }
+  &__text {
+    h1 {
+      @include breakpoint-down(medium) {
+        text-align: left;
+        padding: 1rem 0 0 1rem;
+      }
+    }
+    p {
+      @include breakpoint-down(medium) {
+        text-align: left;
+        padding: 0 0 1rem 1rem;
+        color: $white;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+  }
+  &__cta {
+    @include breakpoint-down(medium) {
+      margin-left: 1rem;
+      background: $white;
+      color: black;
+    }
+  }
+}
+.team {
+  background-color: $veryLightGray;
+  &__grid {
+    display: grid;
+    grid-template: 1fr;
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
