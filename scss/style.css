@@ -515,6 +515,26 @@ button:hover,
   }
 }
 
+.vision__title h2 {
+  margin: 1.5625rem auto;
+}
+
+@media (min-width: 40em) {
+  .vision__title h2 {
+    text-align: left;
+  }
+}
+
+.vision__title p {
+  text-align: left;
+}
+
+@media (min-width: 40em) {
+  .vision__title p {
+    text-align: left;
+  }
+}
+
 .ceo__image {
   position: relative;
   background-image: url("/images/woman 1.jpg");
@@ -536,15 +556,35 @@ button:hover,
   }
 }
 
-@media (max-width: 63.9375em) {
-  .ceo__text h1 {
+@media (min-width: 64em) {
+  .ceo__text {
+    padding-top: 27rem;
     text-align: left;
-    padding: 1rem 0 0 1rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .ceo__text {
+    padding-top: 18rem;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .ceo__text {
+    padding-top: 3rem;
+    padding-left: 1rem;
   }
 }
 
 @media (max-width: 63.9375em) {
-  .ceo__text p {
+  .ceo__title h1 {
+    text-align: left;
+    padding: 2rem 0 0 1rem;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .ceo__description p {
     text-align: left;
     padding: 0 0 1rem 1rem;
     color: white;
@@ -552,27 +592,36 @@ button:hover,
 }
 
 @media (min-width: 64em) {
-  .ceo__text {
-    text-align: left;
+  .ceo__description p {
+    color: white;
   }
 }
 
-@media (max-width: 63.9375em) {
-  .ceo__cta {
-    margin-left: 1rem;
-    background: white;
-    color: black;
-  }
+.ceo__cta {
+  margin-left: 1rem;
+  background: white;
+  color: black;
 }
 
 .team {
   background-color: #fafafa;
 }
 
+.team__intro {
+  text-align: left;
+}
+
+@media (min-width: 40em) {
+  .team__intro p {
+    text-align: left;
+  }
+}
+
 .team__grid {
   display: -ms-grid;
   display: grid;
   grid-template: 1fr;
+  gap: 1.5rem;
 }
 
 @media (min-width: 40em) {
@@ -587,6 +636,42 @@ button:hover,
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.team__item {
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  background-color: white;
+}
+
+.team__item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.team__image {
+  height: 16rem;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.4375;
+}
+
+.team__text {
+  padding: 1.25rem;
+}
+
+.team__title {
+  font-size: 1.125rem;
+  padding-bottom: 0.75rem;
+}
+
+.team__description {
+  color: #9698a6;
 }
 
 .feature__content {
