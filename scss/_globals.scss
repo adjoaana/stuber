@@ -1,18 +1,19 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-size: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  user-select: none;
 }
 body {
   font-size: $font-sm;
   font-family: "Public Sans", sans-serif;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 h1,

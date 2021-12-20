@@ -8,22 +8,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/scss/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-    <script>
-        $(function(){
-            $('.header').load('reuseheader.html');
-        });
-    </script>
-    <script>
-        $(function(){
-            $('#footer').load('reusefooter.html');
-        })
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 </head>
 <body>
-    <header id="header" class="header"></header>
+    <header id="header" class="header">
+        <div class="overlay has-fade"></div>
+        <nav class=" container-px flex flex-jc-sb flex-ai-c">
+            <div class="header__logo">
+                <img src="/images/ping.png" alt="logo">
+            </div>
+            <div class="header__links hide-for-mobile ">
+                <a href="/html/index.html">Home</a><a href="/html/about.html">About</a><a href="/html/services.html">Services</a><a href="#">Contact</a><a href="#">Careers</a>
+            </div>
+            <div class="header__toggle hide-for-desktop ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--   -->
+            <a href="#" class="header__cta button hide-for-mobile  ">Sign Up</a>
+        </nav>
+        <div class="header__menu has-fade ">
+            <a href="#">Home</a><a href="/html/about.html">About</a><a href="/html/services.html">Services</a><a href="#">Contact</a><a href="#">Careers</a>
+        </div>
+    </header>
     <section class="about__hero">
         <div class="about__hero__content">
             <div class="about__hero__image">
@@ -88,7 +96,44 @@
             </div>
         </div>
     </section>
-    <footer id="footer" class="footer"></footer>
+    <footer id="footer" class="footer">
+        <a href="#" class="footer__logo">
+            <img src="/images/ping.png" alt="logo">
+        </a>
+        <div class="footer__social">
+            <a href="#">
+                <img src="/images/icon/icon-facebook.svg" alt="Facebook">
+            </a>
+            <a href="#">
+                <img src="/images/icon/icon-pinterest.svg" alt="Pinterest">
+            </a>
+            <a href="#">
+                <img src="/images/icon/icon-youtube.svg" alt="Youtube">
+            </a>
+            <a href="#">
+                <img src="/images/icon/icon-twitter.svg" alt="Twitter">
+            </a>
+            <a href="#">
+                <img src="/images/icon/icon-instagram.svg" alt="Instagram">
+            </a>
+        </div>
+        <div class="footer__links col1">
+            <a href="/html/about.html">About Us</a>
+            <a href="/">Contact</a>
+            <a href="/">Blog</a>
+        </div>
+        <div class="footer__links col2">
+            <a href="/">Careers</a>
+            <a href="/">Support</a>
+            <a href="/">Privacy Policy</a>
+        </div>
+        <div class="footer__cta">
+            <a href="#" class="button">Sign Up</a>
+            <div class="footer__copyright">
+                &copy; Stuber. All Rights reserved.
+            </div>
+        </div>
+    </footer>
     <script src="/script.js"></script>
 </body>
 </html>

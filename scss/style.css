@@ -72,25 +72,27 @@
           animation: fade-out 300ms ease-in-out forwards;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html,
 body {
   font-size: 100%;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
   font-size: 0.875rem;
   font-family: "Public Sans", sans-serif;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
 }
 
 h1,
@@ -672,6 +674,68 @@ button:hover,
 
 .team__description {
   color: #9698a6;
+}
+
+.slider {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #fafafa;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.slider__item {
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  grid-template: 1fr;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+
+.slider__item img {
+  width: 30%;
+  max-height: 50%;
+}
+
+.slider__item h2 {
+  margin: 0;
+}
+
+@media (min-width: 64em) {
+  .slider__image {
+    min-width: 41rem;
+    height: 100%;
+  }
+}
+
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.grabbing .slider__item img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .feature__content {
