@@ -16,8 +16,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "postcss": "^8.4.6",
-    "sass": "^1.49.8",
-    "upgrade": "^1.1.0"
+    "sass": "^1.49.8"
   },
   "devDependencies": {},
   "scripts": {
@@ -28,7 +27,7 @@
     "url": "git+https://github.com/adjoaana/stuber.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Adjoa Anaman",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/adjoaana/stuber/issues"
