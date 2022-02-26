@@ -13,7 +13,7 @@ const browsersync = require('browser-sync').create();
 
 //Sass Task
 function scssTask(){
-    return src('/scss/style.scss', {sourcemaps:true}) //shows whre exactly  style is coming from instead of the mincss
+    return src('scss/style.scss', {sourcemaps:true}) //shows whre exactly  style is coming from instead of the mincss
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest('dist', {sourcemaps: '.'}));
@@ -52,7 +52,7 @@ function browserSyncReload(cb){
 function watchTask(){
     watch('*.html', browserSyncReload);
     watch(
-        ['/scss/**/*.scss', '/**/*.js'],
+        ['scss/**/*.scss', '/**/*.js'],
         series(scssTask, jsTask, browserSyncReload)
     );
 }
